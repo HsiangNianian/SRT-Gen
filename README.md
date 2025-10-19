@@ -2,7 +2,7 @@
 > 一个基于 funASR 的干声音频字幕文件生成器, 由多个小模型耦合而成, 本地即可推理  
 > A funASR-based dry audio subtitle generator, built by coupling multiple small models and capable of local inference
 
-# SRT 生成思路 - SRT Generation Strategy
+# How it works?
 1. 一般而言, 拿到一段原始音频或者视频, 需要使用 ffmpeg 提取音频, 并使用 mst 或者其他工具/模型提取人的干声作为后续处理的音频文件
    > Generally speaking, after obtaining a raw audio or video clip, use ffmpeg to extract the audio, and then use mst or other tools/models to extract the dry voice of the person as an audio file for subsequent processing
 
@@ -21,8 +21,16 @@
 7. 最后根据每个片段的音频时间戳与音频识别文本生成 `.srt` 文件
    > Finally, generate a .srt file based on the audio timestamps and audio recognition text of each segment.
 
-# 代码架构 - Architecture
+# Architecture
 (下次写...to be...
 
-# 声明 - Statement
+# ToDo List
+- [ ] 优化后的对齐算法
+- [x] SRT 文件生成
+- [ ] [WIP]SRT 多线程 API
+- [ ] 音频 mst 人声分离模型
+- [ ] 视频类型的数据处理
+
+
+# Statement
 此项目仅作学习用途, 严禁将此项目用于一切违反《中华人民共和国宪法》，《中华人民共和国刑法》，《中华人民共和国治安管理处罚法》和《中华人民共和国民法典》之用途。严禁用于任何政治相关用途。
